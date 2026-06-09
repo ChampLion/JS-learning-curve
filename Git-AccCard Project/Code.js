@@ -2,8 +2,8 @@ const xhr = new XMLHttpRequest;
 const acc = document.querySelector('#userInput');
 const submit = document.querySelector('#searchBtn');
 
-const follow = document.querySelector('#followers')
-const follower = document.querySelector('#following')
+const followers = document.querySelector('#followers')
+const following = document.querySelector('#following')
 const repo = document.querySelector('#repos')
 const pfp = document.querySelector('#avatar')
 
@@ -18,8 +18,8 @@ submit.addEventListener('click',(e)=>{
             console.log(data)
             const dataObj = JSON.parse(data);
 
-            follow.innerHTML = `${dataObj.followers}`
-            follower.innerHTML = `${ataObj.following}`
+            followers.innerHTML = `${dataObj.followers}`
+            following.innerHTML = `${ataObj.following}`
             repo.innerHTML = `${dataObj.public_repos}`
             pfp.setAttribute('src',dataObj.avatar_url)
         }
