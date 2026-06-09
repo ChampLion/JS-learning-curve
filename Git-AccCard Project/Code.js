@@ -6,6 +6,7 @@ const followers = document.querySelector('#followers')
 const following = document.querySelector('#following')
 const repo = document.querySelector('#repos')
 const pfp = document.querySelector('#avatar')
+const name = document.querySelector('#name')
 
 submit.addEventListener('click',(e)=>{
     const url = `https://api.github.com/users/${acc.value}`;
@@ -19,9 +20,10 @@ submit.addEventListener('click',(e)=>{
             const dataObj = JSON.parse(data);
 
             followers.innerHTML = `${dataObj.followers}`
-            following.innerHTML = `${ataObj.following}`
+            following.innerHTML = `${dataObj.following}`
             repo.innerHTML = `${dataObj.public_repos}`
             pfp.setAttribute('src',dataObj.avatar_url)
+            name.innerHTML = `${acc.value}`
         }
     }
     xhr.send()
