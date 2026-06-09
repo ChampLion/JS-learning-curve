@@ -17,13 +17,10 @@ submit.addEventListener('click',(e)=>{
             const data = this.responseText;
             console.log(data)
             const dataObj = JSON.parse(data);
-            const followers = dataObj.followers
-            const following = dataObj.following
-            const repos = dataObj.public_repos
 
-            follow.innerHTML = `${followers}`
-            follower.innerHTML = `${following}`
-            repo.innerHTML = `${repos}`
+            follow.innerHTML = `${dataObj.followers}`
+            follower.innerHTML = `${ataObj.following}`
+            repo.innerHTML = `${dataObj.public_repos}`
             pfp.setAttribute('src',dataObj.avatar_url)
         }
     }
