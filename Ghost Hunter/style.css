@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+#game-info {
+    width: 800px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+#score {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#retry {
+    padding: 8px 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+}
+
+#game-area {
+    width: 800px;
+    height: 500px;
+    border: 3px solid white;
+    position: relative;
+    overflow: hidden;
+}
+
+.ghost {
+    position: absolute;
+    font-size: 50px;
+    cursor: pointer;
+    user-select: none;
+}
